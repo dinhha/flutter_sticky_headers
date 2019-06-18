@@ -135,7 +135,7 @@ class RenderStickyHeader extends RenderBox
     final scrollBox = _scrollable.context.findRenderObject();
     if (scrollBox?.attached ?? false) {
       try {
-        return localToGlobal(Offset.zero, ancestor: scrollBox).dy;
+        return localToGlobal(Offset.zero, ancestor: scrollBox).dy + 0.5;
       } catch (e) {
         // ignore and fall-through and return 0.0
       }
